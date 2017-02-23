@@ -1,0 +1,48 @@
+main{
+	background-image: url("America.jpg");
+	background-attachment: content-box;
+	background-size: 100% 100%;
+    background-origin: content-box;
+    background-clip: content-box;
+	height: auto;
+}
+.mdl-layout{
+	margin-bottom: 0px;
+}
+#spacer {
+	background-color: transparent;
+}
+#banner {
+	width: 80vw;
+    margin: auto;
+}
+img{
+	height: auto;
+    display: block;
+	width: 50%;
+	position: relative;
+}
+#sshow, #locimg{
+	width: 80%;
+	margin-left: 10%;
+	height: auto;
+}
+#sshow{
+	margin-bottom: 2.5%;
+}
+.mdl-grid.center-items {
+  justify-content: center;
+}
+.mdl-button{
+	display: block;
+	position: relative;
+	margin-left: 5%;
+}
+h1, h6{
+	position: relative;
+	margin-left: 5%;
+}
+#content{
+	background-color: rgba(133, 133, 133, 1.00);
+	text-align: center;
+}
