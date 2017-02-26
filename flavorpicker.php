@@ -40,12 +40,12 @@
 			<label class="mdl-textfield__label" for="nob">Number of Flavors...</label>
 			<span class="mdl-textfield__error">Input is not a number!</span>
 		  </div><br>
-		<div id="flavorchoosers" style="display:none;">
-		<div id="flavorchooser" class="flavorchooser">
+		<div id="flavorchoosers" style="display:none; padding-bottom: 75vh;">
+		<div id="flavorchooser">
 		<button id="menu-flavor" style="margin-bottom: 2vh; margin-left: 2vh;" class="mdl-button mdl-js-button mdl-button--raised mdl-button--accent button-custom">
 		Choose a Flavor
 		</button>
-		<ul id="flavorlist" class="mdl-menu mdl-js-menu mdl-js-ripple-effect" for="menu-flavor">	
+		<ul id="flavorlist" class="mdl-menu mdl-js-menu mdl-js-ripple-effect customlist" for="menu-flavor">	
 				<?php
 					$servername = "192.168.0.12";
 					$username = "user";
@@ -82,11 +82,20 @@
 		</div>
 		</div>
 	</section>
-	<section id="content" class="mdl-card mdl-cell mdl-cell--4-col mdl-cell--6-col-tablet mdl-cell--4-col-phone mdl-shadow--2dp mdl-color--primary">
+	<section class="mdl-card mdl-cell mdl-cell--4-col mdl-cell--6-col-tablet mdl-cell--4-col-phone mdl-shadow--2dp mdl-color--primary">
+	<div id="flavorscreen">
 	<h2>VG</h2>
 	<h3 id="VG">100%</h3>
 	<div id="flavors">
 	</div>
+	</div>
+		  <div style="margin-left: auto; margin-right: auto; margin-top: 2vh;" class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label textfield-custom">
+			<input class="mdl-textfield__input" onchange="namechange()" type="text" id="nname">
+			<label class="mdl-textfield__label" for="nname">New Flavor Name...</label>
+		  </div><br>
+		<button id="print" onclick="printscreen()"  style="margin-left: auto; margin-right: auto; margin-top: 2vh;" class="mdl-button mdl-js-button mdl-button--raised mdl-button--accent button-custom">
+		Print
+		</button>
 	</section>
 	</section>
   </main>
