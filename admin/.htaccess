@@ -1,1 +1,4 @@
-require local
+AuthType Basic
+AuthName "Admin Area"
+AuthUserFile "S:/Git Clones/vaportrailssite/admin/.htpasswd"
+Require valid-user
