@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-	<link rel="stylesheet" type="text/css" href="index.css" media="screen" />
+	<link rel="stylesheet" type="text/css" href="../index.css" media="screen" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 	<link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-red.min.css" />
 	<script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
@@ -13,6 +13,7 @@
 </head>
 
 <body>
+	<section class="mdl-grid center-items">
 	<section id="content" class="mdl-card mdl-cell mdl-cell--4-col mdl-cell--6-col-tablet mdl-cell--4-col-phone mdl-shadow--2dp">
 		<h3 style="text-align: center;">Flavor Editor</h3>
 		<form action="flavoradd.php" method="post">
@@ -55,7 +56,37 @@
 			  <button type="submit" class="mdl-button mdl-button--raised mdl-js-button mdl-button--colored">Delete</button>
 		</form>
 		
-	</section>	
 	<iframe name="iframe"></iframe>
+	</section>	
+	<section id="content" class="mdl-card mdl-cell mdl-cell--4-col mdl-cell--6-col-tablet mdl-cell--4-col-phone mdl-shadow--2dp">
+		<h3 style="text-align: center;">sshow img adder</h3>
+		<form action="sshowimgadd.php" method="get" target="iframe">
+			<div id="imgadddiv"  style="margin-left: auto; margin-right: auto; margin-top: 2vh;" class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+			<input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="imgn" name="imgnumber">
+			<label class="mdl-textfield__label" for="imgn">Number of sshow images...</label>
+			<span class="mdl-textfield__error">Input is not a number!</span>
+			</div>
+			  <button type="submit" class="mdl-button mdl-button--raised mdl-js-button mdl-button--colored">Change</button>
+		</form>
+	</section>
+	<!--
+	<section id="content" class="mdl-card mdl-cell mdl-cell--4-col mdl-cell--6-col-tablet mdl-cell--4-col-phone mdl-shadow--2dp">
+		<h3 style="text-align: center;">Paragraph Editor</h3>
+		<select id="menu-para"class="mdl-button mdl-button--accent">
+		<option onclick="paraedit('locationinfo')">Location Info</option>
+		<option onclick="paraedit('aboutus')">About Us</option>
+		<option onclick="paraedit('pricestuff')">Price Stuff</option>
+		</select>
+	  <div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable">
+		<label class="mdl-button mdl-js-button mdl-button--icon" for="sample6">
+		  <i class="material-icons">search</i>
+		</label>
+		<div class="mdl-textfield__expandable-holder">
+		  <input class="mdl-textfield__input" type="text" id="sample6">
+		  <label class="mdl-textfield__label" for="sample-expandable">Expandable Input</label>
+		</div>
+	  </div>
+	</section>-->
+	</section>
 </body>
 </html>

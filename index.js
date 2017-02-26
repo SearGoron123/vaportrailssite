@@ -1,11 +1,11 @@
+var sshowimgtotal = 3;
 // in the example above, assign the result
 var timeoutHandle = window.setTimeout(carousel, 5000);
-var sshowimgtotal = 3;
 function carousel() {
 	var sshow = document.getElementById("sshow");
 	var img = parseInt(sshow.src.substr(-5,1));
 	var nimg = img + 1;
-	if (nimg > 3){
+	if (nimg > sshowimgtotal){
 		nimg = 1;
 	}
 	sshow.src = "sshow/slide" + nimg + ".jpg";
@@ -148,4 +148,14 @@ function buttonmaker() {
 	}else{
 		alert("componentHandler does not exist");
 	}
+}
+function paraselect (id) {
+	
+	document.body.getElementById("menu-para").innerHTML = id;
+	
+}
+function paraedit (id, input) {
+	
+	document.body.getElementById("menu-para").innerHTML = id;
+	
 }
