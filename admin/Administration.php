@@ -13,36 +13,30 @@
 </head>
 
 <body>
-	<div id="flavorform" class="mdl-cell mdl-cell--12-col mdl-card mdl-shadow--2dp mdl-color--primary">
+	<div id="content" class="mdl-cell mdl-cell--12-col mdl-card mdl-shadow--2dp">
 		<form action="flavoradd.php" method="post">
 			  <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-				<input class="mdl-textfield__input" name="flavorname" type="text" id="Flavorname">
+				<input class="mdl-textfield__input" name="flavorname" type="text" id="flavorname">
 				<label class="mdl-textfield__label"for="Flavorname">Flavor Name</label>
 			  </div>
-			  <input type="submit" class="mdl-button mdl-button--raised mdl-js-button mdl-button--colored">
-		</form>
-	</div><br>
-	<div id="flavorform" class="mdl-cell mdl-cell--12-col mdl-card mdl-shadow--2dp mdl-color--primary">
-		<form action="flavorrem.php" method="post">
-			  <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-				<input class="mdl-textfield__input" name="flavorname" type="text" id="Flavorname">
-				<label class="mdl-textfield__label"for="Flavorname">Flavor Name</label>
-			  </div>
-			  <input type="submit" class="mdl-button mdl-button--raised mdl-js-button mdl-button--colored">
+			  <input type="submit" class="mdl-button mdl-button--raised mdl-js-button mdl-button--colored"></input>
 		</form>
 	</div>
-		<button id="menu-flavor" style="margin-bottom: 2vh; margin-left: 2vh;" class="mdl-button mdl-js-button mdl-button--raised mdl-button--accent">
+	<section id="content" class="mdl-card mdl-cell mdl-cell--4-col mdl-cell--6-col-tablet mdl-cell--4-col-phone mdl-shadow--2dp">
+		<form action="flavorrem.php" method="post">
+		<select class="mdl-button mdl-button--accent button-custom" name="remflavorname">
 		Choose a Flavor
-		</button>
-		<ul class="mdl-menu mdl-js-menu mdl-js-ripple-effect" for="menu-flavor">
 				<?php
 				$fxml=simplexml_load_file("../flavors.xml") or die("No Flavors Available");
 				foreach($fxml->xpath('/content/flavor') as $flavor) {
-					echo '<li onclick="flavorpick('."'".$flavor->name."'".')" class="mdl-menu__item">'.$flavor->name."</li>";
+					echo '<option value="'.$flavor->name.'">'.$flavor->name."</option>";
 				} 
 				?>
-		</ul>
+		</select>
+			 <input type="submit" class="mdl-button mdl-button--raised mdl-js-button mdl-button--colored"></input>
+		</form>
 		
+	</section>	
 
 </body>
 </html>

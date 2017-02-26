@@ -1,7 +1,7 @@
 <?php
 $fn = "../flavors.xml";
 $myfile = fopen($fn, "a+") or die("Unable to open file!");
-$flavorname = $_POST["flavorname"];
+$flavorname = $_POST["remflavorname"];
 $xml = "<flavor><name>".$flavorname."</name></flavor>";
 $contents = file_get_contents($fn);
 $contents = str_replace($xml, '', $contents);
