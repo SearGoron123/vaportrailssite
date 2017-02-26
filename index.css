@@ -28,6 +28,11 @@ img{
 	width: 50%;
 	position: relative;
 }
+.flavorimg{
+	width: 75%;
+    display: inline-block;
+	opacity: 0.75;
+}
 #sshow, #locimg{
 	width: 80%;
 	margin-left: 10%;
@@ -49,6 +54,17 @@ h1, h6{
 	margin-left: 5%;
 }
 #content{
-	background-color: rgba(133, 133, 133, 1.00);
+	background-color: rgba(133, 133, 133, .9);
+	margin: 0%;
 	text-align: center;
+}
+.textfield-custom{
+	background-color: rgba(133, 133, 133, 0.9);
+	display: block;
+	
+}
+.button-custom{
+	margin-top: 2vh;
+	opacity: 0.80;
+	text-align: left;
 }

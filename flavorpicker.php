@@ -25,22 +25,50 @@
     </div>
   </header>
   <main class="mdl-layout__content">
-		<input type="number" value="2" onchange="buttonmaker()">Number of Flavors to Combine</input>
-		<div id="flavorchoosers">
-		<div id="flavorchooser">
-		<button id="menu-flavor" style="margin-bottom: 2vh; margin-left: 2vh; display:none;" class="mdl-button mdl-js-button mdl-button--raised mdl-button--accent">
+	<section class="mdl-grid center-items">
+	<section id="content" class="mdl-card mdl-cell mdl-cell--4-col mdl-cell--6-col-tablet mdl-cell--4-col-phone mdl-shadow--2dp">
+	<div class="div-card_media">
+	<img class="flavorimg" src="dylansflavors.jpg">
+	</div>
+	<div class="div-card_media">
+	<img class="flavorimg" src="kimsflavors.jpg">
+	</div>
+	</section>
+	<section id="content" class="mdl-card mdl-cell mdl-cell--4-col mdl-cell--6-col-tablet mdl-cell--4-col-phone mdl-shadow--2dp">
+		  <div style="margin-left: auto; margin-right: auto; margin-top: 2vh;" class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label textfield-custom">
+			<input class="mdl-textfield__input" onchange="buttonmaker();" type="number" pattern="-?[0-9]*(\.[0-9]+)?" id="nob">
+			<label class="mdl-textfield__label" for="nob">Number of Flavors...</label>
+			<span class="mdl-textfield__error">Input is not a number!</span>
+		  </div><br>
+		<div id="flavorchoosers" style="display:none;">
+		<div id="flavorchooser" class="flavorchooser">
+		<button id="menu-flavor" style="margin-bottom: 2vh; margin-left: 2vh;" class="mdl-button mdl-js-button mdl-button--raised mdl-button--accent button-custom">
 		Choose a Flavor
 		</button>
 		<ul id="flavorlist" class="mdl-menu mdl-js-menu mdl-js-ripple-effect" for="menu-flavor">	
 				<?php
 				$fxml=simplexml_load_file("flavors.xml") or die("No Flavors Available");
 				foreach($fxml->xpath('/content/flavor') as $flavor) {
-					echo '<li onclick="flavorpick('."'".$flavor->name."'".')" class="mdl-menu__item">'.$flavor->name."</li>";
+					echo '<li onclick="flavorpick('."'".$flavor->name."'".', this)" class="mdl-menu__item">'.$flavor->name."</li>";
 				} 
 				?>
 		</ul>
+		  <div id="percentdiv"  style="margin-left: auto; margin-right: auto; margin-top: 2vh; display:none;" class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label textfield-custom">
+			<input class="mdl-textfield__input" onchange="percentpick(this);" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="percentinput">
+			<label class="mdl-textfield__label" for="percentinput">Percentage of Flavor...</label>
+			<span class="mdl-textfield__error">Input is not a number!</span>
+		  </div>
+		  <br>
 		</div>
 		</div>
+	</section>
+	<section id="content" class="mdl-card mdl-cell mdl-cell--4-col mdl-cell--6-col-tablet mdl-cell--4-col-phone mdl-shadow--2dp">
+	<h2>VG</h2>
+	<h3 id="VG">100%</h3>
+	<div id="flavors">
+	</div>
+	</section>
+	</section>
   </main>
 </div>
 

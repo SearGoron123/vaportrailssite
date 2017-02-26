@@ -8,6 +8,7 @@
 	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"/>
 	<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:500,600,700,800" type="text/css">
 	<script src="../index.js"></script>
+	<script src="jquery-3.1.1.min.js"></script>
 	<title>Vapor Trails Administration</title>
 </head>
 
@@ -37,7 +38,7 @@
 				<?php
 				$fxml=simplexml_load_file("../flavors.xml") or die("No Flavors Available");
 				foreach($fxml->xpath('/content/flavor') as $flavor) {
-					echo '<li onclick="flavorpick('.$flavor->name.')" class="mdl-menu__item">'.$flavor->name."</li>";
+					echo '<li onclick="flavorpick('."'".$flavor->name."'".')" class="mdl-menu__item">'.$flavor->name."</li>";
 				} 
 				?>
 		</ul>
