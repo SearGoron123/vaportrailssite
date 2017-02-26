@@ -1,19 +1,27 @@
 <?php
-$fn = "../flavors.xml";
-$myfile = fopen($fn, "a+") or die("Unable to open file!");
+$servername = "192.168.0.12";
+$username = "admin";
+$password = "itsasecret";
+$dbname = "vaportrails";
 $flavorname = $_POST["flavorname"];
-$xmlc = "</content>";
-$contents = file_get_contents($fn);
-$contents = str_replace($xmlc, '', $contents);
-file_put_contents($fn, $contents);
-$xmleo = "<flavor>";
-$xml = "<name>".$flavorname."</name>";
-$xmlec = "</flavor>";
-fwrite($myfile,$xmleo);
-fwrite($myfile,$xml);
-fwrite($myfile,$xmlec);
-fwrite($myfile,$xmlc);
-fclose($myfile);
+
+// Create connection
+$conn = new mysqli($servername, $username, $password, $dbname);
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+} 
+
+$sql = "INSERT INTO flavors (name)
+VALUES ('".$flavorname."')";
+
+if ($conn->query($sql) === TRUE) {
+    echo "New record created successfully";
+} else {
+    echo "Error: " . $sql . "<br>" . $conn->error;
+}
+
+$conn->close();
 header("Location: Administration.php"); /* Redirect browser */
 exit();
 ?>

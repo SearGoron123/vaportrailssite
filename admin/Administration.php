@@ -13,30 +13,49 @@
 </head>
 
 <body>
-	<div id="content" class="mdl-cell mdl-cell--12-col mdl-card mdl-shadow--2dp">
+	<section id="content" class="mdl-card mdl-cell mdl-cell--4-col mdl-cell--6-col-tablet mdl-cell--4-col-phone mdl-shadow--2dp">
+		<h3 style="text-align: center;">Flavor Editor</h3>
 		<form action="flavoradd.php" method="post">
 			  <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
 				<input class="mdl-textfield__input" name="flavorname" type="text" id="flavorname">
 				<label class="mdl-textfield__label"for="Flavorname">Flavor Name</label>
 			  </div>
-			  <input type="submit" class="mdl-button mdl-button--raised mdl-js-button mdl-button--colored"></input>
+			  <button type="submit" class="mdl-button mdl-button--raised mdl-js-button mdl-button--colored">Create</button>
 		</form>
-	</div>
-	<section id="content" class="mdl-card mdl-cell mdl-cell--4-col mdl-cell--6-col-tablet mdl-cell--4-col-phone mdl-shadow--2dp">
 		<form action="flavorrem.php" method="post">
 		<select class="mdl-button mdl-button--accent button-custom" name="remflavorname">
 		Choose a Flavor
 				<?php
-				$fxml=simplexml_load_file("../flavors.xml") or die("No Flavors Available");
-				foreach($fxml->xpath('/content/flavor') as $flavor) {
-					echo '<option value="'.$flavor->name.'">'.$flavor->name."</option>";
-				} 
+					$servername = "192.168.0.12";
+					$username = "user";
+					$password = "";
+					$dbname = "vaportrails";
+
+					// Create connection
+					$conn = mysqli_connect($servername, $username, $password, $dbname);
+					// Check connection
+					if (!$conn) {
+						die("Connection failed: " . mysqli_connect_error());
+					}
+					$sql = "SELECT name FROM flavors";
+					$result = mysqli_query($conn, $sql);
+
+					if (mysqli_num_rows($result) > 0) {
+						// output data of each row
+						while($row = mysqli_fetch_assoc($result)) {
+							echo "<option value='".$row["name"]."'>".$row["name"]."</option>";
+						}
+					} else {
+						echo "0 results";
+					}
+
+					mysqli_close($conn);
 				?>
 		</select>
-			 <input type="submit" class="mdl-button mdl-button--raised mdl-js-button mdl-button--colored"></input>
+			  <button type="submit" class="mdl-button mdl-button--raised mdl-js-button mdl-button--colored">Delete</button>
 		</form>
 		
 	</section>	
-
+	<iframe name="iframe"></iframe>
 </body>
 </html>

@@ -36,13 +36,15 @@ function sshowctrl(cmd){
 }
 function flavorpick(flavor, func) {
 	var bnumber = func.parentNode.id.substr(-1, 1);
-	var nid;
+	var ndivid;
 	if (isNaN(bnumber)){
-			nid = "flavor";
+			ndivid = "flavor";
+			nid = "flavortext";
 			pid = "percentdiv";
 			bid = "menu-flavor";
 		}else{
-			nid = "flavor" + bnumber;
+			ndivid = "flavor" + bnumber;
+			nid = "flavortext" + bnumber;
 			pid = "percentdiv" + bnumber;
 			bid = "menu-flavor" + bnumber;
 		}
@@ -50,36 +52,39 @@ function flavorpick(flavor, func) {
 	if (document.getElementById(pid).style.display = "none"){
 		document.getElementById(pid).style.display = "block";
 	}
-	if (!document.getElementById(nid)){
+	if (!document.getElementById(ndivid)){
 		var nflavordiv = document.createElement("div");
-		nflavordiv.id = nid;
+		nflavordiv.id = ndivid;
 		var nflavor = document.createElement("h3");
+		nflavor.id = nid;
 		var txt = document.createTextNode(flavor);
 		nflavor.appendChild(txt);
 		nflavordiv.appendChild(nflavor);
 		nflavordiv.className = "flavor";
 		document.getElementById("flavors").appendChild(nflavordiv);
+	}else{
+		document.getElementById(nid).innerHTML = flavor;
 	}
 }
 function percentpick(func) {
 	var i;
 	var inumber = func.id.substr(-1, 1);
-	var nid;
+	var ndivid;
 	if (isNaN(inumber)){
-			nid = "flavor";
+			ndivid = "flavor";
 			npid = "percent";
 		}else{
-			nid = "flavor" + inumber;
+			ndivid = "flavor" + inumber;
 			npid = "percent" + inumber;
 		}
 	var percent = func.value;
-	if (document.getElementById(nid) && !document.getElementById(npid)){
+	if (document.getElementById(ndivid) && !document.getElementById(npid)){
 		var npercent = document.createElement("h4");
 			npercent.id = npid;
 			npercent.className = "percent";
 		var txt = document.createTextNode(percent + '%');
 		npercent.appendChild(txt);
-		document.getElementById(nid).appendChild(npercent);
+		document.getElementById(ndivid).appendChild(npercent);
 	} else {
 		document.getElementById(npid).innerHTML = percent + '%';
 	}
@@ -126,7 +131,7 @@ function buttonmaker() {
 			nflavorchooser.appendChild(nflavorlist);
 			nflavorchooser.removeChild(nflavordiv);
 			flavorchoosers.appendChild(nflavorchooser);
-		}
+		} 
 	}
 	} 
 	if (currentbuttons>wantedbuttons) {

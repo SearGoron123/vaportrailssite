@@ -26,7 +26,7 @@
   </header>
   <main class="mdl-layout__content">
 	<section class="mdl-grid center-items">
-	<section id="content" class="mdl-card mdl-cell mdl-cell--4-col mdl-cell--6-col-tablet mdl-cell--4-col-phone mdl-shadow--2dp">
+	<section id="content" class="mdl-card mdl-cell mdl-cell--4-col mdl-cell--6-col-tablet mdl-cell--4-col-phone mdl-shadow--2dp mdl-color--accent">
 	<div class="div-card_media">
 	<img class="flavorimg" src="dylansflavors.jpg">
 	</div>
@@ -47,10 +47,30 @@
 		</button>
 		<ul id="flavorlist" class="mdl-menu mdl-js-menu mdl-js-ripple-effect" for="menu-flavor">	
 				<?php
-				$fxml=simplexml_load_file("flavors.xml") or die("No Flavors Available");
-				foreach($fxml->xpath('/content/flavor') as $flavor) {
-					echo '<li onclick="flavorpick('."'".$flavor->name."'".', this)" class="mdl-menu__item">'.$flavor->name."</li>";
-				} 
+					$servername = "192.168.0.12";
+					$username = "user";
+					$password = "";
+					$dbname = "vaportrails";
+
+					// Create connection
+					$conn = mysqli_connect($servername, $username, $password, $dbname);
+					// Check connection
+					if (!$conn) {
+						die("Connection failed: " . mysqli_connect_error());
+					}
+					$sql = "SELECT name FROM flavors";
+					$result = mysqli_query($conn, $sql);
+
+					if (mysqli_num_rows($result) > 0) {
+						// output data of each row
+						while($row = mysqli_fetch_assoc($result)) {
+							echo '<li onclick="flavorpick('."'".$row["name"]."'".', this)" class="mdl-menu__item">'.$row["name"]."</li>";
+						}
+					} else {
+						echo "0 results";
+					}
+
+					mysqli_close($conn);
 				?>
 		</ul>
 		  <div id="percentdiv"  style="margin-left: auto; margin-right: auto; margin-top: 2vh; display:none;" class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label textfield-custom">
@@ -62,7 +82,7 @@
 		</div>
 		</div>
 	</section>
-	<section id="content" class="mdl-card mdl-cell mdl-cell--4-col mdl-cell--6-col-tablet mdl-cell--4-col-phone mdl-shadow--2dp">
+	<section id="content" class="mdl-card mdl-cell mdl-cell--4-col mdl-cell--6-col-tablet mdl-cell--4-col-phone mdl-shadow--2dp mdl-color--primary">
 	<h2>VG</h2>
 	<h3 id="VG">100%</h3>
 	<div id="flavors">
