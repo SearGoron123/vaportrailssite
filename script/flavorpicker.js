@@ -115,10 +115,16 @@ function buttonmaker() {
 		for (i = extrabtstart; i<=extrabtnend; i++) {
 			if (i<=0){
 				button1.style.display = "none";
+			if (!document.getElementById("flavor")){}else{
+				document.getElementById("flavor").parentNode.removeChild(document.getElementById("flavor"));
+			}
 			}
 			else{
 			var remflav = document.getElementById("flavorchooser" + i);
 			remflav.parentNode.removeChild(remflav);
+			if (!document.getElementById("flavor" + i)){}else{
+				document.getElementById("flavor" + i).parentNode.removeChild(document.getElementById("flavor" + i));
+			}
 			}
 		}
 	}
@@ -258,10 +264,16 @@ function buttonmakera() {
 		for (i = extrabtstart; i<=extrabtnend; i++) {
 			if (i<=0){
 				button1.style.display = "none";
+				if (!document.getElementById("additive")){}else{
+					document.getElementById("additive").parentNode.removeChild(document.getElementById("additive"));
+				}
 			}
 			else{
 			var remflav = document.getElementById("additivechooser" + i);
 			remflav.parentNode.removeChild(remflav);
+			}
+			if (!document.getElementById("additive" + i)){}else{
+				document.getElementById("additive" + i).parentNode.removeChild(document.getElementById("additive" + i));
 			}
 		}
 	}
