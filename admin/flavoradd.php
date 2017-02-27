@@ -4,6 +4,7 @@ $username = "admin";
 $password = "itsasecret";
 $dbname = "vaportrails";
 $flavorname = $_POST["flavorname"];
+$table = $_POST["table"];
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
@@ -12,7 +13,7 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 } 
 
-$sql = "INSERT INTO flavors (name)
+$sql = "INSERT INTO ".$table." (name)
 VALUES ('".$flavorname."')";
 
 if ($conn->query($sql) === TRUE) {

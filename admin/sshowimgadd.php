@@ -11,4 +11,6 @@ $arr[0] = $data;
 
 // write back to file
 file_put_contents($f, implode($arr));
+
+echo "Slide Show Image Number Has Been Changed";
 ?>
