@@ -15,8 +15,9 @@
 
 <body>
 	<section class="mdl-grid center-items">
-	<section id="content" class="mdl-card mdl-cell mdl-cell--6-col mdl-cell--6-col-tablet mdl-cell--4-col-phone mdl-shadow--2dp">
+	<section style="text-align: left;" id="content" class="mdl-card mdl-cell mdl-cell--6-col mdl-cell--6-col-tablet mdl-cell--4-col-phone mdl-shadow--2dp">
 		<h3 style="text-align: center;">Flavor Editor</h3>
+		<div style="margin-left: 2vw;">
 		<form action="flavoradd.php" method="post">
 			  <input style="display:none;"type="text" value="flavors" name="table"></input>
 			  <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label mdl-color--accent">
@@ -181,9 +182,11 @@
 		</select>
 			  <button type="submit" class="mdl-button mdl-button--raised mdl-js-button mdl-button--accent">Delete Kim's Flavor</button>
 		</form>
+		</div>
 	</section>	
-	<section id="content" class="mdl-card mdl-cell mdl-cell--6-col mdl-cell--6-col-tablet mdl-cell--4-col-phone mdl-shadow--2dp">
-		<h3 style="text-align: center;">img editor</h3>
+	<section style="text-align: left;"id="content" class="mdl-card mdl-cell mdl-cell--6-col mdl-cell--6-col-tablet mdl-cell--4-col-phone mdl-shadow--2dp">
+		<h3 style="text-align: center;">Image Editor</h3>
+		<div style="text-align: left;margin-left: 2vw;">
 		<form action="upload.php" method="post" enctype="multipart/form-data" target="iframe">
 			Select New Background Image:<br><br>
 			<input style="display:none;"type="text" value="background" name="fname"></input>
@@ -193,7 +196,7 @@
 			<input class="mdl-button mdl-button--raised mdl-js-button mdl-button--colored" type="file" name="fileToUpload" id="fileToUpload"><br><br>
 			<input class="mdl-button mdl-button--raised mdl-js-button mdl-button--colored" type="submit" value="Upload Image" name="submit">
 			
-		</form><br><br>
+		</form><br>
 		<form action="upload.php" method="post" enctype="multipart/form-data" target="iframe">
 			Select New Banner Image:<br><br>
 			<input style="display:none;"type="text" value="vt" name="fname"></input>
@@ -203,7 +206,7 @@
 			<input class="mdl-button mdl-button--raised mdl-js-button mdl-button--colored" type="file" name="fileToUpload" id="fileToUpload"><br><br>
 			<input class="mdl-button mdl-button--raised mdl-js-button mdl-button--colored" type="submit" value="Upload Image" name="submit">
 			
-		</form><br><br>
+		</form><br>
 		<form action="upload.php" method="post" enctype="multipart/form-data" target="iframe">
 			Select New Location Image:<br><br>
 			<input style="display:none;"type="text" value="vt-location" name="fname"></input>
@@ -213,28 +216,32 @@
 			<input class="mdl-button mdl-button--raised mdl-js-button mdl-button--colored" type="file" name="fileToUpload" id="fileToUpload"><br><br>
 			<input class="mdl-button mdl-button--raised mdl-js-button mdl-button--colored" type="submit" value="Upload Image" name="submit">
 			
-		</form><br><br>
+		</form><br>
 		<form action="sshowimgadd.php" method="get" target="iframe">
-			Change Number of Slide Show Images:<br><br>
+			Change Number of Slide Show Images:<br>
 			<div id="imgadddiv"  style="margin-left: auto; margin-right: auto; margin-top: 2vh;" class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label mdl-color--primary">
-			<input class="mdl-textfield__input" style="text-align:center; color:white;" type="number" pattern="-?[0-9]*(\.[0-9]+)?" id="imgn" name="imgnumber">
-			<label class="mdl-textfield__label" style="text-align:center; color:white;" for="imgn">Number of sshow images...</label>
+			<input class="mdl-textfield__input" style="text-align:center; color:white;" type="number" pattern="-?[0-9]*(\.[0-9]+)?" id="imgnumber" name="imgnumber">
+			<label class="mdl-textfield__label" style="text-align:center; color:white;" for="imgnumber">Number of Slide Show images...</label>
 			<div class="mdl-textfield__error">Input is not a number!</div>
 			</div><br><br>
 			  <button type="submit" class="mdl-button mdl-button--raised mdl-js-button mdl-button--colored">Change</button>
 		</form><br><br>
 		<form action="upload.php" method="post" enctype="multipart/form-data" target="iframe">
-			Select New Slide Show Image:<br><br>
+			Select New Slide Show Image:<br>
 			
-			Img Number:
 			<input style="display:none;"type="text" value="slide" name="fname"></input>
 			<input style="display:none;"type="text" value="sshow/" name="filedir"></input>
-			<input type="number" name="fnumber"></input><br><br>
+			<div id="imgadddiv"  style="margin-left: auto; margin-right: auto; margin-top: 2vh;" class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label mdl-color--primary">
+			<input class="mdl-textfield__input" style="text-align:center; color:white;" type="number" pattern="-?[0-9]*(\.[0-9]+)?" id="fn" name="fnumber">
+			<label class="mdl-textfield__label" style="text-align:center; color:white;" for="fn">Image number...</label>
+			<div class="mdl-textfield__error">Input is not a number!</div>
+			</div><br><br>
 			<input class="mdl-button mdl-button--raised mdl-js-button mdl-button--colored" type="file" name="fileToUpload" id="fileToUpload"><br><br>
 			<input class="mdl-button mdl-button--raised mdl-js-button mdl-button--colored" type="submit" value="Upload Image" name="submit">
 			
 		</form><br><br>
 	<iframe name="iframe"></iframe>
+	</div>
 	</section>
 	<!--
 	<section id="content" class="mdl-card mdl-cell mdl-cell--4-col mdl-cell--6-col-tablet mdl-cell--4-col-phone mdl-shadow--2dp">

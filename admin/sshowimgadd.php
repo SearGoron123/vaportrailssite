@@ -1,7 +1,7 @@
 <?php
 $data = "var sshowimgtotal = ".$_GET['imgnumber'].";\n";
 
-$f = "../index.js";
+$f = "../script/index.js";
 
 // read into array
 $arr = file($f);
