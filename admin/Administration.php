@@ -7,8 +7,8 @@
 	<script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
 	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"/>
 	<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:500,600,700,800" type="text/css">
-	<script src="../index.js"></script>
-	<script defer src="flavorpicker.js"></script>
+	<script src="../script/index.js"></script>
+	<script src="../script/flavorpicker.js"></script>
 	<script src="jquery-3.1.1.min.js"></script>
 	<title>Vapor Trails Administration</title>
 </head>
@@ -185,29 +185,53 @@
 	<section id="content" class="mdl-card mdl-cell mdl-cell--4-col mdl-cell--6-col-tablet mdl-cell--4-col-phone mdl-shadow--2dp">
 		<h3 style="text-align: center;">img editor</h3>
 		<form action="upload.php" method="post" enctype="multipart/form-data" target="iframe">
-			Select New Main Image:<br><br>
-			<input style="display:none;"type="text" value="vt-location" name="fname"></input>
+			Select New Background Image:<br><br>
+			<input style="display:none;"type="text" value="background" name="fname"></input>
 			<input style="display:none;"type="number" value="" name="fnumber"></input>
-			<input style="display:none;"type="text" value="" name="filedir"></input>
+			<input style="display:none;"type="text" value="media/" name="filedir"></input>
+			<div style="text-align:left;margin-left:2vw;">
 			<input type="file" name="fileToUpload" id="fileToUpload"><br><br>
 			<input type="submit" value="Upload Image" name="submit">
+			</div>
+		</form><br><br>
+		<form action="upload.php" method="post" enctype="multipart/form-data" target="iframe">
+			Select New Banner Image:<br><br>
+			<input style="display:none;"type="text" value="vt" name="fname"></input>
+			<input style="display:none;"type="number" value="" name="fnumber"></input>
+			<input style="display:none;"type="text" value="media/" name="filedir"></input>
+			<div style="text-align:left;margin-left:2vw;">
+			<input type="file" name="fileToUpload" id="fileToUpload"><br><br>
+			<input type="submit" value="Upload Image" name="submit">
+			</div>
+		</form><br><br>
+		<form action="upload.php" method="post" enctype="multipart/form-data" target="iframe">
+			Select New Location Image:<br><br>
+			<input style="display:none;"type="text" value="vt-location" name="fname"></input>
+			<input style="display:none;"type="number" value="" name="fnumber"></input>
+			<input style="display:none;"type="text" value="media/" name="filedir"></input>
+			<div style="text-align:left;margin-left:2vw;">
+			<input type="file" name="fileToUpload" id="fileToUpload"><br><br>
+			<input type="submit" value="Upload Image" name="submit">
+			</div>
 		</form>
 		<form action="sshowimgadd.php" method="get" target="iframe">
 			<div id="imgadddiv"  style="margin-left: auto; margin-right: auto; margin-top: 2vh;" class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
 			<input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="imgn" name="imgnumber">
 			<label class="mdl-textfield__label" for="imgn">Number of sshow images...</label>
-			<span class="mdl-textfield__error">Input is not a number!</span>
+			<div class="mdl-textfield__error">Input is not a number!</div>
 			</div>
 			  <button type="submit" class="mdl-button mdl-button--raised mdl-js-button mdl-button--colored">Change</button>
 		</form>
 		<form action="upload.php" method="post" enctype="multipart/form-data" target="iframe">
 			Select New Slide Show Image:<br><br>
+			<div style="text-align:left;margin-left:2vw;">
 			Img Number:
 			<input style="display:none;"type="text" value="slide" name="fname"></input>
-			<input style="display:none;"type="text" value="" name="filedir"></input>
+			<input style="display:none;"type="text" value="sshow/" name="filedir"></input>
 			<input type="number" name="fnumber"></input><br><br>
 			<input type="file" name="fileToUpload" id="fileToUpload"><br><br>
 			<input type="submit" value="Upload Image" name="submit">
+			</div>
 		</form><br><br>
 	<iframe name="iframe"></iframe>
 	</section>

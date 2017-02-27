@@ -1,5 +1,5 @@
 main{
-	background-image: url("America.jpg");
+	background-image: url("/media/background.jpg");
 	background-attachment: content-box;
 	background-size: cover;
     background-origin: content-box;

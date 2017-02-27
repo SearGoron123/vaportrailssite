@@ -24,7 +24,7 @@ if ($uploadOk == 0) {
 } else {//checking if file exsists
 	if(file_exists("$target_dir/$name")) unlink("$target_dir/$name");
     if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
-        echo "The file ". basename( $_FILES["fileToUpload"]["name"]). " has been uploaded.";
+        echo "The ".$name.$fnumber." file has been replaced with your ". basename( $_FILES["fileToUpload"]["name"]). ".";
     } else {
         echo "Sorry, there was an error uploading your file.";
     }
