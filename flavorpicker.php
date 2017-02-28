@@ -26,8 +26,8 @@
   </header>
   <main class="mdl-layout__content">
 	<section class="mdl-grid center-items">
-	<section id="content" class="mdl-card mdl-cell mdl-cell--4-col mdl-cell--6-col-tablet mdl-cell--4-col-phone mdl-shadow--2dp mdl-color--accent">
-	<h3>Dylan's Flavors</h3>	
+	<section style="padding-bottom: 5vh;" id="content" class="mdl-card mdl-cell mdl-cell--4-col mdl-cell--6-col-tablet mdl-cell--4-col-phone mdl-shadow--2dp mdl-color--accent">
+	<h3 style="margin-top: 5vh;">Dylan's Flavors</h3>	
 		<?php
 			$servername = "192.168.0.12";
 			$username = "user";
@@ -77,13 +77,13 @@
 		?>
 	</section>
 	<section id="content" class="mdl-card mdl-cell mdl-cell--4-col mdl-cell--6-col-tablet mdl-cell--4-col-phone mdl-shadow--2dp">
-		  <div id="nicamountdiv"  style="margin-left: auto; margin-right: auto; margin-top: 2vh;" class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label textfield-custom mdl-color--grey">
-			<input class="mdl-textfield__input" style="color: white; text-align:center" onchange="nicamount();" maxlength="3" max="100" min="0" type="number" pattern="?[0-9]*(\.[0-9]+)?" id="nicamountinput">
+		  <div id="nicamountdiv"  style="margin-left: auto; margin-right: auto; margin-top: 5vh;" class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label textfield-custom mdl-color--grey">
+			<input class="mdl-textfield__input" style="color: white; text-align:center" onchange="nicamount();" max="100" min="0" type="number" step="0.01" id="nicamountinput">
 			<label class="mdl-textfield__label" style="color: white; text-align:center" for="nicamountinput">Amount of Nicotine...</label>
 			<span class="mdl-textfield__error">Input is invalid!</span>
 		  </div>
 		  <div style="margin-left: auto; margin-right: auto; margin-top: 2vh;" class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label textfield-custom mdl-color--accent">
-			<input class="mdl-textfield__input" style="color: white; text-align:center" maxlength="2" max="10" min="0" onchange="buttonmaker();" type="number" pattern="?[0-9]*(\.[0-9]+)?" id="nob">
+			<input class="mdl-textfield__input" style="color: white; text-align:center" max="10" min="0" onchange="buttonmaker();" type="number" step="0.01" id="nob">
 			<label class="mdl-textfield__label" style="color: white; text-align:center" for="nob">Number of Flavors...</label>
 			<span class="mdl-textfield__error">Input has to be between 0 & 10</span>
 		  </div><br>
@@ -119,7 +119,7 @@
 				?>
 		</select>
 		  <div id="percentdiv"  style="margin-left: auto; margin-right: auto; margin-top: 2vh; display:none;" class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label textfield-custom mdl-color--accent">
-			<input class="mdl-textfield__input" style="color: white; text-align:center" onchange="percentpick(this);" maxlength="3" max="100" min="0" type="number" pattern="?[0-9]*(\.[0-9]+)?" id="percentinput">
+			<input class="mdl-textfield__input" style="color: white; text-align:center" onchange="percentpick(this);" max="100" min="0" type="number" step="0.01" id="percentinput">
 			<label class="mdl-textfield__label" style="color: white; text-align:center" for="percentinput">Percentage of Flavor...</label>
 			<span class="mdl-textfield__error">Input has to be between 0 & 100</span>
 		  </div>
@@ -127,7 +127,7 @@
 		</div>
 		</div>
 		  <div style="margin-left: auto; margin-right: auto; margin-top: 2vh;" class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label textfield-custom mdl-color--primary">
-			<input class="mdl-textfield__input" style="color: white; text-align:center" onchange="buttonmakera();" maxlength="2" max="10" min="0" type="number" pattern="?[0-9]*(\.[0-9]+)?" id="noba">
+			<input class="mdl-textfield__input" style="color: white; text-align:center" onchange="buttonmakera();" max="10" min="0" type="number" step="0.01" id="noba">
 			<label class="mdl-textfield__label" style="color: white; text-align:center" for="noba">Number of Additives...</label>
 			<span class="mdl-textfield__error">Input has to be between 0 & 10</span>
 		  </div><br>
@@ -163,7 +163,7 @@
 				?>
 		</select>
 		  <div id="percentdiva"  style="margin-left: auto; margin-right: auto; margin-top: 2vh; display:none;" class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label mdl-color--primary textfield-custom">
-			<input class="mdl-textfield__input" style="color: white; text-align:center" onchange="percentpicka(this);" maxlength="3" max="100" min="0" type="number" pattern="-?[0-9]*(\.[0-9]+)?" id="percentinputa">
+			<input class="mdl-textfield__input" style="color: white; text-align:center" onchange="percentpicka(this);" max="100" min="0" type="number" step="0.01" id="percentinputa">
 			<label class="mdl-textfield__label" style="color: white; text-align:center" for="percentinputa">Percentage of Additive...</label>
 			<span class="mdl-textfield__error">Input has to be between 0 & 100</span>
 		  </div>
@@ -173,7 +173,7 @@
 	</section>
 	<section id="printstuff" class="mdl-card mdl-cell mdl-cell--4-col mdl-cell--6-col-tablet mdl-cell--4-col-phone mdl-shadow--2dp mdl-color--primary">
 	<div id="flavorscreen">
-	<h2>VG</h2>
+	<h2 style="margin-top: 5vh;">VG</h2>
 	<h3 id="VG">100%</h3>
 	<div id="flavors">
 	</div>

@@ -62,7 +62,7 @@ function percentpick(func) {
 	var percentcount = 0;
 	for (i = 0; i<flavorcount; i++){
 		var length = currentpercents[i].innerHTML.length
-		percentcount = percentcount + parseInt(currentpercents[i].innerHTML.substr(0, length));
+		percentcount = percentcount + parseFloat(currentpercents[i].innerHTML.substr(0, length));
 	}
 	var vgnumber = 100 - percentcount;
 	vgcounter.innerHTML = vgnumber + '%';
@@ -190,7 +190,7 @@ function percentpicka(func) {
 	var percentcount = 0;
 	for (i = 0; i<additivecount; i++){
 		var length = currentpercents[i].innerHTML.length
-		percentcount = percentcount + parseInt(currentpercents[i].innerHTML.substr(0, length));
+		percentcount = percentcount + parseFloat(currentpercents[i].innerHTML.substr(0, length));
 	}
 	var vgnumber = 100 - percentcount;
 	vgcounter.innerHTML = vgnumber + '%';

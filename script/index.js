@@ -1,4 +1,4 @@
-var sshowimgtotal = 3;
+var sshowimgtotal = ;
 var carouseltime = 2000;
 // in the example above, assign the result
 var timeoutHandle = window.setTimeout(carousel, carouseltime);

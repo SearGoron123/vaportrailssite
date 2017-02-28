@@ -190,7 +190,7 @@
 		<form style="margin-bottom: 2vh;margin-top:2vh;" action="upload.php" method="post" enctype="multipart/form-data" target="iframe">
 			Select New Background Image:<br><br>
 			<input style="display:none;"type="text" value="background" name="fname"></input>
-			<input style="display:none;"type="number" value="" name="fnumber"></input>
+			<input style="display:none;"type="number" step="0.01" value="" name="fnumber"></input>
 			<input style="display:none;"type="text" value="media/" name="filedir"></input>
 			
 			<input class="mdl-button mdl-button--raised mdl-js-button mdl-button--colored" style="margin-bottom: 2vh;margin-top:2vh;" type="file" name="fileToUpload" id="fileToUpload">
@@ -200,7 +200,7 @@
 		<form style="margin-bottom: 2vh;margin-top:2vh;" action="upload.php" method="post" enctype="multipart/form-data" target="iframe">
 			Select New Banner Image:<br><br>
 			<input style="display:none;"type="text" value="vt" name="fname"></input>
-			<input style="display:none;"type="number" value="" name="fnumber"></input>
+			<input style="display:none;"type="number" step="0.01" value="" name="fnumber"></input>
 			<input style="display:none;"type="text" value="media/" name="filedir"></input>
 			
 			<input class="mdl-button mdl-button--raised mdl-js-button mdl-button--colored" style="margin-bottom: 2vh;margin-top:2vh;" type="file" name="fileToUpload" id="fileToUpload">
@@ -210,7 +210,7 @@
 		<form style="margin-bottom: 2vh;margin-top:2vh;" action="upload.php" method="post" enctype="multipart/form-data" target="iframe">
 			Select New Location Image:<br><br>
 			<input style="display:none;"type="text" value="vt-location" name="fname"></input>
-			<input style="display:none;"type="number" value="" name="fnumber"></input>
+			<input style="display:none;"type="number" step="0.01" value="" name="fnumber"></input>
 			<input style="display:none;"type="text" value="media/" name="filedir"></input>
 			
 			<input class="mdl-button mdl-button--raised mdl-js-button mdl-button--colored" style="margin-bottom: 2vh;margin-top:2vh;" type="file" name="fileToUpload" id="fileToUpload">
@@ -220,9 +220,9 @@
 		<form style="margin-bottom: 2vh;margin-top:2vh;" action="sshowimgadd.php" method="get" target="iframe">
 			Change Number of Slide Show Images:<br>
 			<div id="imgadddiv"  style="margin-top: 2vh; margin-bottom: 2vh;" class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label mdl-color--primary">
-			<input class="mdl-textfield__input" style="text-align:center; color:white;" type="number" pattern="-?[0-9]*(\.[0-9]+)?" id="imgnumber" name="imgnumber">
+			<input class="mdl-textfield__input" style="text-align:center; color:white;" type="number" step="0.01" id="imgnumber" name="imgnumber">
 			<label class="mdl-textfield__label" style="text-align:center; color:white;" for="imgnumber">Number of Slide Show images...</label>
-			<div class="mdl-textfield__error">Input is not a number!</div>
+			<div class="mdl-textfield__error">Input is not valid!</div>
 			</div>
 			  <button type="submit" class="mdl-button mdl-button--raised mdl-js-button mdl-button--accent">Change</button>
 		</form>
@@ -232,13 +232,21 @@
 			<input style="display:none;"type="text" value="slide" name="fname"></input>
 			<input style="display:none;"type="text" value="sshow/" name="filedir"></input>
 			<div id="imgadddiv" style="margin-bottom: 2vh;margin-top:2vh;" class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label mdl-color--primary">
-			<input class="mdl-textfield__input" style="text-align:center; color:white;" type="number" pattern="-?[0-9]*(\.[0-9]+)?" id="fn" name="fnumber">
+			<input class="mdl-textfield__input" style="text-align:center; color:white;" type="number" step="0.01" id="fn" name="fnumber">
 			<label class="mdl-textfield__label" style="text-align:center; color:white;" for="fn">Image number...</label>
-			<div class="mdl-textfield__error">Input is not a number!</div>
+			<div class="mdl-textfield__error">Input is not valid!</div>
 			</div>
 			<input class="mdl-button mdl-button--raised mdl-js-button mdl-button--accent" style="margin-bottom: 2vh;margin-top:2vh;" type="file" name="fileToUpload" id="fileToUpload">
 			<input class="mdl-button mdl-button--raised mdl-js-button mdl-button--colored" type="submit" value="Upload Image" name="submit">
-			
+		</form>
+		<form style="margin-bottom: 2vh;margin-top:2vh;" action="sshowtimer.php" method="get" target="iframe">
+			Change Slide Show Time:<br>
+			<div id="imgadddiv"  style="margin-top: 2vh; margin-bottom: 2vh;" class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label mdl-color--primary">
+			<input class="mdl-textfield__input" style="text-align:center; color:white;" type="number" step="0.01" maxlength="4" max="15" min="0" id="ntimer" name="ntimer">
+			<label class="mdl-textfield__label" style="text-align:center; color:white;" for="ntimer">Slide Show Time in Seconds...</label>
+			<div class="mdl-textfield__error">Input should be between 0 and 15 seconds</div>
+			</div>
+			  <button type="submit" class="mdl-button mdl-button--raised mdl-js-button mdl-button--accent">Change</button>
 		</form>
 	<iframe name="iframe"></iframe>
 	</div>
