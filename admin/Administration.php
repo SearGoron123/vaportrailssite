@@ -20,7 +20,7 @@
 		<div style="margin-left: 2vw;">
 		<form action="flavoradd.php" method="post">
 			  <input style="display:none;"type="text" value="flavors" name="table"></input>
-			  <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label mdl-color--accent">
+			  <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label mdl-color--accent" style="margin-bottom: 2vh;margin-top:2vh;">
 				<input class="mdl-textfield__input" style="text-align:center; color:white;" name="flavorname" type="text" id="flavorname">
 				<label class="mdl-textfield__label" style="text-align:center; color:white;" for="Flavorname">Flavor Name</label>
 			  </div>
@@ -28,7 +28,7 @@
 		</form>
 		<form action="flavoradd.php" method="post">
 			  <input style="display:none;"type="text" value="additives" name="table"></input>
-			  <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label mdl-color--accent">
+			  <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label mdl-color--accent" style="margin-bottom: 2vh;margin-top:2vh;">
 				<input class="mdl-textfield__input" style="text-align:center; color:white;" name="flavorname" type="text" id="flavorname">
 				<label class="mdl-textfield__label" style="text-align:center; color:white;" for="Flavorname">Additive Name</label>
 			  </div>
@@ -36,7 +36,7 @@
 		</form>
 		<form action="flavoradd.php" method="post">
 			  <input style="display:none;"type="text" value="dylansflavors" name="table"></input>
-			  <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label mdl-color--accent">
+			  <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label mdl-color--accent" style="margin-bottom: 2vh;margin-top:2vh;">
 				<input class="mdl-textfield__input" style="text-align:center; color:white;" name="flavorname" type="text" id="flavorname">
 				<label class="mdl-textfield__label" style="text-align:center; color:white;" for="Flavorname">Dylan's Flavor Name</label>
 			  </div>
@@ -44,15 +44,15 @@
 		</form>
 		<form action="flavoradd.php" method="post">
 			  <input style="display:none;"type="text" value="kimsflavors" name="table"></input>
-			  <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label mdl-color--accent">
+			  <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label mdl-color--accent" style="margin-bottom: 2vh;margin-top:2vh;">
 				<input class="mdl-textfield__input" style="text-align:center; color:white;" name="flavorname" type="text" id="flavorname">
 				<label class="mdl-textfield__label" style="text-align:center; color:white;" for="Flavorname">Kim's Flavor Name</label>
 			  </div>
 			  <button type="submit" class="mdl-button mdl-button--raised mdl-js-button mdl-button--accent">Create</button>
-		</form><br><br>
+		</form>
 		<form action="flavorrem.php" method="post">
 		<input style="display:none;"type="text" value="flavors" name="table"></input>
-		<select class="mdl-button mdl-button--accent" name="remflavorname">
+		<select class="mdl-button mdl-button--raised mdl-button--primary button-custom" name="remflavorname" style="margin-bottom: 2vh;margin-top:2vh;">
 		Choose a Flavor
 				<?php
 					$servername = "192.168.0.12";
@@ -82,10 +82,10 @@
 				?>
 		</select>
 			  <button type="submit" class="mdl-button mdl-button--raised mdl-js-button mdl-button--accent">Delete Flavor</button>
-		</form><br>
+		</form>
 		<form action="flavorrem.php" method="post">
 		<input style="display:none;"type="text" value="additives" name="table"></input>
-		<select class="mdl-button mdl-button--accent" name="remflavorname">
+		<select class="mdl-button mdl-button--raised mdl-button--primary button-custom" name="remflavorname" style="margin-bottom: 2vh;margin-top:2vh;">
 		Choose an Additive
 				<?php
 					$servername = "192.168.0.12";
@@ -115,10 +115,10 @@
 				?>
 		</select>
 			  <button type="submit" class="mdl-button mdl-button--raised mdl-js-button mdl-button--accent">Delete Additive</button>
-		</form><br>
+		</form>
 		<form action="flavorrem.php" method="post">
 		<input style="display:none;"type="text" value="dylansflavors" name="table"></input>
-		<select class="mdl-button mdl-button--accent" name="remflavorname">
+		<select class="mdl-button mdl-button--raised mdl-button--primary button-custom" name="remflavorname" style="margin-bottom: 2vh;margin-top:2vh;">
 		Choose Dylan's Flavor
 				<?php
 					$servername = "192.168.0.12";
@@ -148,10 +148,10 @@
 				?>
 		</select>
 			  <button type="submit" class="mdl-button mdl-button--raised mdl-js-button mdl-button--accent">Delete Dylan's Flavor</button>
-		</form><br>
+		</form>
 		<form action="flavorrem.php" method="post">
 		<input style="display:none;"type="text" value="kimsflavors" name="table"></input>
-		<select class="mdl-button mdl-button--accent" name="remflavorname">
+		<select class="mdl-button mdl-button--raised mdl-button--primary button-custom" name="remflavorname" style="margin-bottom: 2vh;margin-top:2vh;">
 		Choose Kim's Flavor
 				<?php
 					$servername = "192.168.0.12";
@@ -187,56 +187,56 @@
 	<section style="text-align: left;"id="content" class="mdl-card mdl-cell mdl-cell--6-col mdl-cell--6-col-tablet mdl-cell--4-col-phone mdl-shadow--2dp">
 		<h3 style="text-align: center;">Image Editor</h3>
 		<div style="text-align: left;margin-left: 2vw;">
-		<form action="upload.php" method="post" enctype="multipart/form-data" target="iframe">
+		<form style="margin-bottom: 2vh;margin-top:2vh;" action="upload.php" method="post" enctype="multipart/form-data" target="iframe">
 			Select New Background Image:<br><br>
 			<input style="display:none;"type="text" value="background" name="fname"></input>
 			<input style="display:none;"type="number" value="" name="fnumber"></input>
 			<input style="display:none;"type="text" value="media/" name="filedir"></input>
 			
-			<input class="mdl-button mdl-button--raised mdl-js-button mdl-button--colored" type="file" name="fileToUpload" id="fileToUpload"><br><br>
-			<input class="mdl-button mdl-button--raised mdl-js-button mdl-button--colored" type="submit" value="Upload Image" name="submit">
+			<input class="mdl-button mdl-button--raised mdl-js-button mdl-button--colored" style="margin-bottom: 2vh;margin-top:2vh;" type="file" name="fileToUpload" id="fileToUpload">
+			<input class="mdl-button mdl-button--raised mdl-js-button mdl-button--accent" type="submit" value="Upload Image" name="submit">
 			
 		</form><br>
-		<form action="upload.php" method="post" enctype="multipart/form-data" target="iframe">
+		<form style="margin-bottom: 2vh;margin-top:2vh;" action="upload.php" method="post" enctype="multipart/form-data" target="iframe">
 			Select New Banner Image:<br><br>
 			<input style="display:none;"type="text" value="vt" name="fname"></input>
 			<input style="display:none;"type="number" value="" name="fnumber"></input>
 			<input style="display:none;"type="text" value="media/" name="filedir"></input>
 			
-			<input class="mdl-button mdl-button--raised mdl-js-button mdl-button--colored" type="file" name="fileToUpload" id="fileToUpload"><br><br>
-			<input class="mdl-button mdl-button--raised mdl-js-button mdl-button--colored" type="submit" value="Upload Image" name="submit">
+			<input class="mdl-button mdl-button--raised mdl-js-button mdl-button--colored" style="margin-bottom: 2vh;margin-top:2vh;" type="file" name="fileToUpload" id="fileToUpload">
+			<input class="mdl-button mdl-button--raised mdl-js-button mdl-button--accent" type="submit" value="Upload Image" name="submit">
 			
 		</form><br>
-		<form action="upload.php" method="post" enctype="multipart/form-data" target="iframe">
+		<form style="margin-bottom: 2vh;margin-top:2vh;" action="upload.php" method="post" enctype="multipart/form-data" target="iframe">
 			Select New Location Image:<br><br>
 			<input style="display:none;"type="text" value="vt-location" name="fname"></input>
 			<input style="display:none;"type="number" value="" name="fnumber"></input>
 			<input style="display:none;"type="text" value="media/" name="filedir"></input>
 			
-			<input class="mdl-button mdl-button--raised mdl-js-button mdl-button--colored" type="file" name="fileToUpload" id="fileToUpload"><br><br>
-			<input class="mdl-button mdl-button--raised mdl-js-button mdl-button--colored" type="submit" value="Upload Image" name="submit">
+			<input class="mdl-button mdl-button--raised mdl-js-button mdl-button--colored" style="margin-bottom: 2vh;margin-top:2vh;" type="file" name="fileToUpload" id="fileToUpload">
+			<input class="mdl-button mdl-button--raised mdl-js-button mdl-button--accent" type="submit" value="Upload Image" name="submit">
 			
 		</form><br>
-		<form action="sshowimgadd.php" method="get" target="iframe">
+		<form style="margin-bottom: 2vh;margin-top:2vh;" action="sshowimgadd.php" method="get" target="iframe">
 			Change Number of Slide Show Images:<br>
-			<div id="imgadddiv"  style="margin-left: auto; margin-right: auto; margin-top: 2vh;" class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label mdl-color--primary">
+			<div id="imgadddiv"  style="margin-top: 2vh; margin-bottom: 2vh;" class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label mdl-color--primary">
 			<input class="mdl-textfield__input" style="text-align:center; color:white;" type="number" pattern="-?[0-9]*(\.[0-9]+)?" id="imgnumber" name="imgnumber">
 			<label class="mdl-textfield__label" style="text-align:center; color:white;" for="imgnumber">Number of Slide Show images...</label>
 			<div class="mdl-textfield__error">Input is not a number!</div>
-			</div><br><br>
-			  <button type="submit" class="mdl-button mdl-button--raised mdl-js-button mdl-button--colored">Change</button>
-		</form><br><br>
-		<form action="upload.php" method="post" enctype="multipart/form-data" target="iframe">
+			</div>
+			  <button type="submit" class="mdl-button mdl-button--raised mdl-js-button mdl-button--accent">Change</button>
+		</form>
+		<form style="margin-bottom: 2vh;margin-top:2vh;" action="upload.php" method="post" enctype="multipart/form-data" target="iframe">
 			Select New Slide Show Image:<br>
 			
 			<input style="display:none;"type="text" value="slide" name="fname"></input>
 			<input style="display:none;"type="text" value="sshow/" name="filedir"></input>
-			<div id="imgadddiv"  style="margin-left: auto; margin-right: auto; margin-top: 2vh;" class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label mdl-color--primary">
+			<div id="imgadddiv" style="margin-bottom: 2vh;margin-top:2vh;" class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label mdl-color--primary">
 			<input class="mdl-textfield__input" style="text-align:center; color:white;" type="number" pattern="-?[0-9]*(\.[0-9]+)?" id="fn" name="fnumber">
 			<label class="mdl-textfield__label" style="text-align:center; color:white;" for="fn">Image number...</label>
 			<div class="mdl-textfield__error">Input is not a number!</div>
-			</div><br><br>
-			<input class="mdl-button mdl-button--raised mdl-js-button mdl-button--colored" type="file" name="fileToUpload" id="fileToUpload"><br><br>
+			</div>
+			<input class="mdl-button mdl-button--raised mdl-js-button mdl-button--accent" style="margin-bottom: 2vh;margin-top:2vh;" type="file" name="fileToUpload" id="fileToUpload">
 			<input class="mdl-button mdl-button--raised mdl-js-button mdl-button--colored" type="submit" value="Upload Image" name="submit">
 			
 		</form><br><br>

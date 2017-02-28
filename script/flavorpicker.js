@@ -1,6 +1,7 @@
 
-function flavorpick(flavor, func) {
-	var bnumber = func.parentNode.id.substr(-1, 1);
+function flavorpick(func) {
+	var bnumber = func.id.substr(-1, 1);
+	var flavor = func.value;
 	var ndivid;
 	if (isNaN(bnumber)){
 			ndivid = "flavor";
@@ -13,7 +14,6 @@ function flavorpick(flavor, func) {
 			pid = "percentdiv" + bnumber;
 			bid = "menu-flavor" + bnumber;
 		}
-		document.getElementById(bid).innerHTML = flavor;
 	if (document.getElementById(pid).style.display = "none"){
 		document.getElementById(pid).style.display = "block";
 	}
@@ -89,12 +89,7 @@ function buttonmaker() {
 			var nbutton = nflavorchooser.children[0];
 			nbutton.id = "menu-flavor" + i;
 			nbutton.removeAttribute("data-upgraded");
-			var nflavordiv = nflavorchooser.children[1];
-			var nflavorlist = nflavordiv.children[1];
-			nflavorlist.id = "flavorlist" + i;
-			nflavorlist.setAttribute("for", "menu-flavor" + i);
-			nflavorlist.removeAttribute("data-upgraded");
-			var ninputdiv = nflavorchooser.children[2];
+			var ninputdiv = nflavorchooser.children[1];
 			ninputdiv.id = "percentdiv" + i;
 			var npinput = ninputdiv.children[0];
 			npinput.id = "percentinput" + i;
@@ -102,8 +97,6 @@ function buttonmaker() {
 			nlabel.setAttribute("for", "percentinput" + i);
 			ninputdiv.className = "mdl-textfield mdl-js-textfield mdl-textfield--floating-label mdl-color--accent textfield-custom";
 			ninputdiv.removeAttribute("data-upgraded");
-			nflavorchooser.appendChild(nflavorlist);
-			nflavorchooser.removeChild(nflavordiv);
 			flavorchoosers.appendChild(nflavorchooser);
 		} 
 	}
@@ -134,9 +127,10 @@ function buttonmaker() {
 		alert("componentHandler does not exist");
 	}
 }
-function additivepick(additive, func) {
-	var bnumber = func.parentNode.id.substr(-1, 1);
+function additivepick(func) {
+	var bnumber = func.id.substr(-1, 1);
 	var ndivid;
+	var additive = func.value;
 	if (isNaN(bnumber)){
 			ndivid = "additive";
 			nid = "additivetext";
@@ -148,7 +142,6 @@ function additivepick(additive, func) {
 			pid = "percentdiva" + bnumber;
 			bid = "menu-additive" + bnumber;
 		}
-		document.getElementById(bid).innerHTML = additive;
 	if (document.getElementById(pid).style.display = "none"){
 		document.getElementById(pid).style.display = "block";
 	}
@@ -238,12 +231,7 @@ function buttonmakera() {
 			var nbutton = nadditivechooser.children[0];
 			nbutton.id = "menu-additive" + i;
 			nbutton.removeAttribute("data-upgraded");
-			var nadditivediv = nadditivechooser.children[1];
-			var nadditivelist = nadditivediv.children[1];
-			nadditivelist.id = "additivelist" + i;
-			nadditivelist.setAttribute("for", "menu-additive" + i);
-			nadditivelist.removeAttribute("data-upgraded");
-			var ninputdiv = nadditivechooser.children[2];
+			var ninputdiv = nadditivechooser.children[1];
 			ninputdiv.id = "percentdiva" + i;
 			var npinput = ninputdiv.children[0];
 			npinput.id = "percentinputa" + i;
@@ -251,8 +239,6 @@ function buttonmakera() {
 			nlabel.setAttribute("for", "percentinputa" + i);
 			ninputdiv.className = "mdl-textfield mdl-js-textfield mdl-textfield--floating-label mdl-color--primary textfield-custom";
 			ninputdiv.removeAttribute("data-upgraded");
-			nadditivechooser.appendChild(nadditivelist);
-			nadditivechooser.removeChild(nadditivediv);
 			additivechoosers.appendChild(nadditivechooser);
 		} 
 	}

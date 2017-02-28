@@ -38,9 +38,6 @@ img{
 	margin-left: 10%;
 	height: auto;
 }
-#sshow{
-	margin-bottom: 2.5%;
-}
 .mdl-grid.center-items {
   justify-content: center;
 }
@@ -75,7 +72,6 @@ h1, h6{
 	text-align: left;
 }
 .customlist{
-  overflow-y:scroll;
+  overflow-y:auto;
   margin-bottom: 0%;
-  max-height: 75vh;
 }

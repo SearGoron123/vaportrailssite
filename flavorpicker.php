@@ -76,7 +76,7 @@
 			mysqli_close($conn);
 		?>
 	</section>
-	<section id="content" style="padding-bottom: 75vh;" class="mdl-card mdl-cell mdl-cell--4-col mdl-cell--6-col-tablet mdl-cell--4-col-phone mdl-shadow--2dp">
+	<section id="content" class="mdl-card mdl-cell mdl-cell--4-col mdl-cell--6-col-tablet mdl-cell--4-col-phone mdl-shadow--2dp">
 		  <div id="nicamountdiv"  style="margin-left: auto; margin-right: auto; margin-top: 2vh;" class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label textfield-custom mdl-color--grey">
 			<input class="mdl-textfield__input" style="color: white; text-align:center" onchange="nicamount();" maxlength="3" max="100" min="0" type="number" pattern="?[0-9]*(\.[0-9]+)?" id="nicamountinput">
 			<label class="mdl-textfield__label" style="color: white; text-align:center" for="nicamountinput">Amount of Nicotine...</label>
@@ -89,10 +89,8 @@
 		  </div><br>
 		<div id="flavorchoosers" style="display:none;">
 		<div id="flavorchooser">
-		<button id="menu-flavor" style="margin-bottom: 2vh; margin-left: 2vh;" class="mdl-button mdl-js-button mdl-button--raised mdl-button--primary button-custom">
-		Choose a Flavor
-		</button>
-		<ul id="flavorlist" class="mdl-menu mdl-js-menu mdl-js-ripple-effect customlist" for="menu-flavor">	
+		<select onchange="flavorpick(this)" id="menu-flavor" style="margin-bottom: 2vh; margin-left: 2vh;" class="mdl-button mdl-button--raised mdl-button--primary button-custom">
+				<option></option>
 				<?php
 					$servername = "192.168.0.12";
 					$username = "user";
@@ -111,7 +109,7 @@
 					if (mysqli_num_rows($result) > 0) {
 						// output data of each row
 						while($row = mysqli_fetch_assoc($result)) {
-							echo '<li onclick="flavorpick('."'".$row["name"]."'".', this)" class="mdl-menu__item">'.$row["name"]."</li>";
+							echo '<option>'.$row["name"]."</option>";
 						}
 					} else {
 						echo "0 results";
@@ -119,10 +117,10 @@
 
 					mysqli_close($conn);
 				?>
-		</ul>
+		</select>
 		  <div id="percentdiv"  style="margin-left: auto; margin-right: auto; margin-top: 2vh; display:none;" class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label textfield-custom mdl-color--accent">
-			<input class="mdl-textfield__input" style="color: white; text-align:center" onchange="percentpick(this);" max="10" type="number" pattern="?[0-9]*(\.[0-9]+)?" id="percentinput">
-			<label class="mdl-textfield__label" style="color: white; text-align:center" maxlength="3" max="100" min="0" for="percentinput">Percentage of Flavor...</label>
+			<input class="mdl-textfield__input" style="color: white; text-align:center" onchange="percentpick(this);" maxlength="3" max="100" min="0" type="number" pattern="?[0-9]*(\.[0-9]+)?" id="percentinput">
+			<label class="mdl-textfield__label" style="color: white; text-align:center" for="percentinput">Percentage of Flavor...</label>
 			<span class="mdl-textfield__error">Input has to be between 0 & 100</span>
 		  </div>
 		  <br>
@@ -135,10 +133,8 @@
 		  </div><br>
 		<div id="additivechoosers" style="display:none;">
 		<div id="additivechooser">
-		<button id="menu-additive" style="margin-bottom: 2vh; margin-left: 2vh;" class="mdl-button mdl-js-button mdl-button--raised mdl-button--accent button-custom">
-		Choose an Additive
-		</button>
-		<ul id="additivelist" class="mdl-menu mdl-js-menu mdl-js-ripple-effect customlist" for="menu-additive">	
+		<select onchange="additivepick(this)" id="menu-additive" style="margin-bottom: 2vh; margin-left: 2vh;" class="mdl-button mdl-button--raised mdl-button--accent button-custom">
+				<option></option>
 				<?php
 					$servername = "192.168.0.12";
 					$username = "user";
@@ -157,7 +153,7 @@
 					if (mysqli_num_rows($result) > 0) {
 						// output data of each row
 						while($row = mysqli_fetch_assoc($result)) {
-							echo '<li onclick="additivepick('."'".$row["name"]."'".', this)" class="mdl-menu__item">'.$row["name"]."</li>";
+							echo '<option>'.$row["name"]."</option>";
 						}
 					} else {
 						echo "0 results";
@@ -165,7 +161,7 @@
 
 					mysqli_close($conn);
 				?>
-		</ul>
+		</select>
 		  <div id="percentdiva"  style="margin-left: auto; margin-right: auto; margin-top: 2vh; display:none;" class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label mdl-color--primary textfield-custom">
 			<input class="mdl-textfield__input" style="color: white; text-align:center" onchange="percentpicka(this);" maxlength="3" max="100" min="0" type="number" pattern="-?[0-9]*(\.[0-9]+)?" id="percentinputa">
 			<label class="mdl-textfield__label" style="color: white; text-align:center" for="percentinputa">Percentage of Additive...</label>
