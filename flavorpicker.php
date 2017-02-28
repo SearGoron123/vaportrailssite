@@ -90,7 +90,7 @@
 		<div id="flavorchoosers" style="display:none;">
 		<div id="flavorchooser">
 		<select onchange="flavorpick(this)" id="menu-flavor" style="margin-bottom: 2vh; margin-left: 2vh;" class="mdl-button mdl-button--raised mdl-button--primary button-custom">
-				<option></option>
+				<option selected disabled>Choose a Flavor</option>
 				<?php
 					$servername = "192.168.0.12";
 					$username = "user";
@@ -134,7 +134,7 @@
 		<div id="additivechoosers" style="display:none;">
 		<div id="additivechooser">
 		<select onchange="additivepick(this)" id="menu-additive" style="margin-bottom: 2vh; margin-left: 2vh;" class="mdl-button mdl-button--raised mdl-button--accent button-custom">
-				<option></option>
+				<option selected disabled>Choose an Additive</option>
 				<?php
 					$servername = "192.168.0.12";
 					$username = "user";

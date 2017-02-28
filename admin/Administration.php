@@ -53,7 +53,7 @@
 		<form action="flavorrem.php" method="post">
 		<input style="display:none;"type="text" value="flavors" name="table"></input>
 		<select class="mdl-button mdl-button--raised mdl-button--primary button-custom" name="remflavorname" style="margin-bottom: 2vh;margin-top:2vh;">
-		Choose a Flavor
+				<option selected disabled>Choose a Flavor</option>
 				<?php
 					$servername = "192.168.0.12";
 					$username = "user";
@@ -86,7 +86,7 @@
 		<form action="flavorrem.php" method="post">
 		<input style="display:none;"type="text" value="additives" name="table"></input>
 		<select class="mdl-button mdl-button--raised mdl-button--primary button-custom" name="remflavorname" style="margin-bottom: 2vh;margin-top:2vh;">
-		Choose an Additive
+				<option selected disabled>Choose an Additive</option>
 				<?php
 					$servername = "192.168.0.12";
 					$username = "user";
@@ -119,7 +119,7 @@
 		<form action="flavorrem.php" method="post">
 		<input style="display:none;"type="text" value="dylansflavors" name="table"></input>
 		<select class="mdl-button mdl-button--raised mdl-button--primary button-custom" name="remflavorname" style="margin-bottom: 2vh;margin-top:2vh;">
-		Choose Dylan's Flavor
+				<option selected disabled>Choose a Flavor</option>
 				<?php
 					$servername = "192.168.0.12";
 					$username = "user";
@@ -152,7 +152,7 @@
 		<form action="flavorrem.php" method="post">
 		<input style="display:none;"type="text" value="kimsflavors" name="table"></input>
 		<select class="mdl-button mdl-button--raised mdl-button--primary button-custom" name="remflavorname" style="margin-bottom: 2vh;margin-top:2vh;">
-		Choose Kim's Flavor
+				<option selected disabled>Choose a Flavor</option>
 				<?php
 					$servername = "192.168.0.12";
 					$username = "user";
