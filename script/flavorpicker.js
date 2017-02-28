@@ -281,16 +281,7 @@ function paraedit (id, input) {
 }
 function namechange () {
 	var name = document.getElementById("nname").value;
-	if (!document.getElementById("flavname"))
-	{
-	var ntext = document.createTextNode("Name: " + name);
-	var elem = document.createElement("h3");
-	elem.id = "flavname";
-	elem.appendChild(ntext);
-	document.getElementById("flavorscreen").appendChild(elem);
-	}else{
-		document.getElementById("flavname").innerHTML = "Name: " + name;
-	}
+	document.getElementById("flavname").innerHTML = "Name: " + name;
 }
 function printscreen(){
      var printContents = document.getElementById("flavorscreen").innerHTML;

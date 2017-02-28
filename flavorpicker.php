@@ -179,6 +179,7 @@
 	</div>
 	<div id="additives">
 	</div>
+	<h3 id="flavname">Name: N/A</h3>
 	</div>
 		  <div style="margin-left: auto; margin-right: auto; margin-top: 2vh; opacity: 1.0;" class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label textfield-custom mdl-color--accent">
 			<input class="mdl-textfield__input" style="color: white; text-align:center" onchange="namechange()" type="text" id="nname">
