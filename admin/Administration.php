@@ -20,7 +20,7 @@
 		<div style="margin-left: 2vw;">
 		<form action="flavoradd.php" method="post">
 			  <input style="display:none;"type="text" value="flavors" name="table"></input>
-			  <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label mdl-color--accent" style="margin-bottom: 2vh;margin-top:2vh;">
+			  <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label mdl-color--primary" style="margin-bottom: 2vh;margin-top:2vh;">
 				<input class="mdl-textfield__input" style="text-align:center; color:white;" name="flavorname" type="text" id="flavorname">
 				<label class="mdl-textfield__label" style="text-align:center; color:white;" for="Flavorname">Flavor Name</label>
 			  </div>
@@ -28,7 +28,7 @@
 		</form>
 		<form action="flavoradd.php" method="post">
 			  <input style="display:none;"type="text" value="additives" name="table"></input>
-			  <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label mdl-color--accent" style="margin-bottom: 2vh;margin-top:2vh;">
+			  <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label mdl-color--primary" style="margin-bottom: 2vh;margin-top:2vh;">
 				<input class="mdl-textfield__input" style="text-align:center; color:white;" name="flavorname" type="text" id="flavorname">
 				<label class="mdl-textfield__label" style="text-align:center; color:white;" for="Flavorname">Additive Name</label>
 			  </div>
@@ -36,7 +36,7 @@
 		</form>
 		<form action="flavoradd.php" method="post">
 			  <input style="display:none;"type="text" value="dylansflavors" name="table"></input>
-			  <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label mdl-color--accent" style="margin-bottom: 2vh;margin-top:2vh;">
+			  <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label mdl-color--primary" style="margin-bottom: 2vh;margin-top:2vh;">
 				<input class="mdl-textfield__input" style="text-align:center; color:white;" name="flavorname" type="text" id="flavorname">
 				<label class="mdl-textfield__label" style="text-align:center; color:white;" for="Flavorname">Dylan's Flavor Name</label>
 			  </div>
@@ -44,7 +44,7 @@
 		</form>
 		<form action="flavoradd.php" method="post">
 			  <input style="display:none;"type="text" value="kimsflavors" name="table"></input>
-			  <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label mdl-color--accent" style="margin-bottom: 2vh;margin-top:2vh;">
+			  <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label mdl-color--primary" style="margin-bottom: 2vh;margin-top:2vh;">
 				<input class="mdl-textfield__input" style="text-align:center; color:white;" name="flavorname" type="text" id="flavorname">
 				<label class="mdl-textfield__label" style="text-align:center; color:white;" for="Flavorname">Kim's Flavor Name</label>
 			  </div>
