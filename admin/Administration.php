@@ -196,7 +196,7 @@
 			<input class="mdl-button mdl-button--raised mdl-js-button mdl-button--colored" style="margin-bottom: 2vh;margin-top:2vh;" type="file" name="fileToUpload" id="fileToUpload">
 			<input class="mdl-button mdl-button--raised mdl-js-button mdl-button--accent" type="submit" value="Upload Image" name="submit">
 			
-		</form><br>
+		</form>
 		<form style="margin-bottom: 2vh;margin-top:2vh;" action="upload.php" method="post" enctype="multipart/form-data" target="iframe">
 			Select New Banner Image:<br><br>
 			<input style="display:none;"type="text" value="vt" name="fname"></input>
@@ -206,7 +206,7 @@
 			<input class="mdl-button mdl-button--raised mdl-js-button mdl-button--colored" style="margin-bottom: 2vh;margin-top:2vh;" type="file" name="fileToUpload" id="fileToUpload">
 			<input class="mdl-button mdl-button--raised mdl-js-button mdl-button--accent" type="submit" value="Upload Image" name="submit">
 			
-		</form><br>
+		</form>
 		<form style="margin-bottom: 2vh;margin-top:2vh;" action="upload.php" method="post" enctype="multipart/form-data" target="iframe">
 			Select New Location Image:<br><br>
 			<input style="display:none;"type="text" value="vt-location" name="fname"></input>
@@ -216,7 +216,7 @@
 			<input class="mdl-button mdl-button--raised mdl-js-button mdl-button--colored" style="margin-bottom: 2vh;margin-top:2vh;" type="file" name="fileToUpload" id="fileToUpload">
 			<input class="mdl-button mdl-button--raised mdl-js-button mdl-button--accent" type="submit" value="Upload Image" name="submit">
 			
-		</form><br>
+		</form>
 		<form style="margin-bottom: 2vh;margin-top:2vh;" action="sshowimgadd.php" method="get" target="iframe">
 			Change Number of Slide Show Images:<br>
 			<div id="imgadddiv"  style="margin-top: 2vh; margin-bottom: 2vh;" class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label mdl-color--primary">
@@ -239,7 +239,7 @@
 			<input class="mdl-button mdl-button--raised mdl-js-button mdl-button--accent" style="margin-bottom: 2vh;margin-top:2vh;" type="file" name="fileToUpload" id="fileToUpload">
 			<input class="mdl-button mdl-button--raised mdl-js-button mdl-button--colored" type="submit" value="Upload Image" name="submit">
 			
-		</form><br><br>
+		</form>
 	<iframe name="iframe"></iframe>
 	</div>
 	</section>
