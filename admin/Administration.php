@@ -55,9 +55,9 @@
 		<select class="mdl-button mdl-button--raised mdl-button--primary button-custom" name="remflavorname" style="margin-bottom: 2vh;margin-top:2vh;">
 				<option selected disabled>Choose a Flavor</option>
 				<?php
-					$servername = "192.168.0.12";
-					$username = "user";
-					$password = "";
+					$servername = "localhost";
+					$username = "vaporadmin";
+					$password = "0?R2%)I3r_kL";
 					$dbname = "vaportrails";
 
 					// Create connection
@@ -88,9 +88,9 @@
 		<select class="mdl-button mdl-button--raised mdl-button--primary button-custom" name="remflavorname" style="margin-bottom: 2vh;margin-top:2vh;">
 				<option selected disabled>Choose an Additive</option>
 				<?php
-					$servername = "192.168.0.12";
-					$username = "user";
-					$password = "";
+					$servername = "localhost";
+					$username = "vaporadmin";
+					$password = "0?R2%)I3r_kL";
 					$dbname = "vaportrails";
 
 					// Create connection
@@ -121,9 +121,9 @@
 		<select class="mdl-button mdl-button--raised mdl-button--primary button-custom" name="remflavorname" style="margin-bottom: 2vh;margin-top:2vh;">
 				<option selected disabled>Choose a Flavor</option>
 				<?php
-					$servername = "192.168.0.12";
-					$username = "user";
-					$password = "";
+					$servername = "localhost";
+					$username = "vaporadmin";
+					$password = "0?R2%)I3r_kL";
 					$dbname = "vaportrails";
 
 					// Create connection
@@ -154,9 +154,9 @@
 		<select class="mdl-button mdl-button--raised mdl-button--primary button-custom" name="remflavorname" style="margin-bottom: 2vh;margin-top:2vh;">
 				<option selected disabled>Choose a Flavor</option>
 				<?php
-					$servername = "192.168.0.12";
-					$username = "user";
-					$password = "";
+					$servername = "localhost";
+					$username = "vaporadmin";
+					$password = "0?R2%)I3r_kL";
 					$dbname = "vaportrails";
 
 					// Create connection

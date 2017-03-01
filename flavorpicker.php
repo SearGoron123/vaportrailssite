@@ -29,9 +29,9 @@
 	<section style="padding-bottom: 5vh;" id="content" class="mdl-card mdl-cell mdl-cell--4-col mdl-cell--6-col-tablet mdl-cell--4-col-phone mdl-shadow--2dp mdl-color--accent">
 	<h3 style="margin-top: 5vh;">Dylan's Flavors</h3>	
 		<?php
-			$servername = "192.168.0.12";
-			$username = "user";
-			$password = "";
+			$servername = "localhost";
+			$username = "personwhovapes";
+			$password = "password";
 			$dbname = "vaportrails";
 			// Create connection
 			$conn = mysqli_connect($servername, $username, $password, $dbname);
@@ -53,9 +53,9 @@
 		?>
 	<h3>Kim's Flavors</h3>	
 		<?php
-			$servername = "192.168.0.12";
-			$username = "user";
-			$password = "";
+			$servername = "localhost";
+			$username = "personwhovapes";
+			$password = "password";
 			$dbname = "vaportrails";
 			// Create connection
 			$conn = mysqli_connect($servername, $username, $password, $dbname);
@@ -92,9 +92,9 @@
 		<select onchange="flavorpick(this)" id="menu-flavor" style="margin-bottom: 2vh; margin-left: 2vh;" class="mdl-button mdl-button--raised mdl-button--primary button-custom">
 				<option selected disabled>Choose a Flavor</option>
 				<?php
-					$servername = "192.168.0.12";
-					$username = "user";
-					$password = "";
+					$servername = "localhost";
+					$username = "personwhovapes";
+					$password = "password";
 					$dbname = "vaportrails";
 
 					// Create connection
@@ -136,9 +136,9 @@
 		<select onchange="additivepick(this)" id="menu-additive" style="margin-bottom: 2vh; margin-left: 2vh;" class="mdl-button mdl-button--raised mdl-button--accent button-custom">
 				<option selected disabled>Choose an Additive</option>
 				<?php
-					$servername = "192.168.0.12";
-					$username = "user";
-					$password = "";
+					$servername = "localhost";
+					$username = "personwhovapes";
+					$password = "password";
 					$dbname = "vaportrails";
 
 					// Create connection

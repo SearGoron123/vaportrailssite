@@ -1,7 +1,7 @@
 <?php
-$servername = "192.168.0.12";
-$username = "admin";
-$password = "itsasecret";
+$servername = "localhost";
+$username = "vaporadmin";
+$password = "0?R2%)I3r_kL";
 $dbname = "vaportrails";
 $flavorname = $_POST["flavorname"];
 $table = $_POST["table"];

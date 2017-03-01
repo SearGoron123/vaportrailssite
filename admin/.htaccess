@@ -1,4 +1,4 @@
 AuthType Basic
 AuthName "Admin Area"
-AuthUserFile "S:/Git Clones/vaportrailssite/admin/.htpasswd"
+AuthUserFile " /home/vaportrails/public_html/admin/.htpasswd"
 Require valid-user
